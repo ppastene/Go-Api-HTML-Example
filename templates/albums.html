@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <h1>My collection of albums</h1>
+    <ul>
+        {{range $album := .albums}}
+        <li><a href="{{$album.ID}}">{{$album.Title}}</a></li>
+        {{end}}
+    </ul>
+</body>
+</html>
